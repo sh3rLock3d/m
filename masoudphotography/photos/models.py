@@ -9,5 +9,8 @@ class Gallery(models.Model):
 
 class Photo(models.Model):
     name = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
     low_quality_image = models.ImageField(upload_to ='')
     high_quality_image = models.ImageField(upload_to ='')
+    category = models.ForeignKey(Gallery, on_delete=models.CASCADE)
+    olaviat = models.DecimalField(max_digits=5, decimal_places=2)
