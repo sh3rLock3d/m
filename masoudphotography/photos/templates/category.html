@@ -71,8 +71,7 @@
                     {% endfor %}
                   </ul>
                 </li>
-                <li><a href="services">Services</a></li>
-                <li><a href="about">About</a></li>
+
                 <li><a href="contact">Contact</a></li>
               </ul>
             </nav>
@@ -108,7 +107,14 @@
           <div class="col-md-7">
             <div class="row mb-5">
               <div class="col-12 ">
-                <h2 class="site-section-heading text-center">{{ category }} Gallery</h2>
+                <h2 class="site-section-heading text-center">
+                  {% if category %}
+                    {{ category }}
+                  {% else %}
+                    
+                  {% endif %}
+
+                   Gallery</h2>
               </div>
             </div>
           </div>
